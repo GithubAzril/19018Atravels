@@ -1,0 +1,52 @@
+#qrCode {
+    width: 100px;
+    height: 100px;
+}
+
+.ticket {
+    background: linear-gradient(to right, #f8f8f8, #e0e0e0);
+    border: none; /* Menghilangkan border */
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ticket-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.ticket-header h2 {
+    font-size: 24px;
+    color: #4A90E2;
+    margin: 0;
+}
+
+.ticket-header p {
+    margin: 5px 0;
+}
+
+.logo {
+    width: 100px; /* Ukuran logo */
+    height: auto; /* Menjaga rasio aspek */
+    margin-bottom: 10px; /* Jarak antara logo dan teks */
+}
+
+.qr-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.qr-container div {
+    background: white; /* Memberikan latar belakang putih pada QR Code */
+    border-radius: 8px; /* Membuat sudut QR Code menjadi bulat */
+    padding: 10px; /* Memberikan padding di sekitar QR Code */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Bayangan untuk QR Code */
+}

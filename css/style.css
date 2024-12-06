@@ -1,0 +1,110 @@
+html {
+    scroll-behavior: smooth;
+}
+
+nav {
+    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#userDropdown {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+}
+#results-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+#results-list a {
+    width: calc(33.333% - 1rem); 
+    text-decoration: none;
+    color: inherit;
+}
+
+#results-list img {
+    border-radius: 0.5rem;
+}
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+.container {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 400%;
+    overflow: hidden;
+}
+
+.section {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: #f9f9f9;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.active {
+    opacity: 1;
+}
+
+.language-container {
+    position: relative;
+}
+
+#language-options {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    width: 6rem; 
+}
+
+.language-option {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer; 
+}
+
+
+
+.draggable {
+    cursor: grab;
+}
+
+.draggable:active {
+    cursor: grabbing;
+}
+
+#card-container {
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+#card-container::-webkit-scrollbar {
+    display: none;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.bg-cover {
+    background-attachment: fixed;
+}

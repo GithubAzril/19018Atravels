@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATravels</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="../gambar/logo.png" rel="shortcut icon" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTx4/NlJahc3U+iwz7A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="bg-white border-gray-200 dark:bg-gray-900 w-full z-20">
+            <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-4 md:mx-auto py-2 pr-4">
+                <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                    <img src="../gambar/logo.png" class="h-12 w-auto md:h-16" alt="Logo" />
+                </a>
+                <div class="flex md:order-2 space-x-6">
+                    <div class="flex space-x-4 items-center">
+                        <div class="language-container" style="position: relative;">
+                            <a href="#" class="items-center mt-1 text-white text-xl" id="language-toggle">
+                                <i class="fa-solid fa-globe"></i>
+                            </a>
+                            <div id="language-options" class="hidden">
+                                <div class="bg-white text-black text-start mt-2 rounded shadow">
+                                    <a href="#" class="language-option block flex rounded-t border-black py-1 px-4" data-lang="id">Indonesia</a>
+                                    <a href="#" class="language-option block rounded-b py-1 px-4" data-lang="en">Inggris</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="bg-[url('../gambar/background.png')] bg-cover bg-center w-full p-5 md:p-10 lg:p-10">
+        <div class="mx-auto max-w-screen-xl text-center lg:py-20 relative">
+            <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Apakah anda ingin berlibur hari ini?</h1>
+            <p class="mb-8 text-lg font-normal text-white font-semibold lg:text-xl sm:px-16 lg:px-48 dark:text-white">"Apakah Anda siap untuk berpetualang? Temukan destinasi terbaik, nikmati penawaran eksklusif, dan buat kenangan yang akan bertahan seumur hidup!"</p>
+            <form id="search-form" class="w-full max-w-md mx-auto pb-4">
+                <label for="search-input" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Cari Destinasi</label>
+                <div class="relative">
+                    <input type="search" id="search-input" class="block w-full p-4 text-sm text-gray-900 border border-gray-300 rounded-lg bg-white focus:ring-blue-500 focus:border-blue-500" placeholder="Cari Destinasi Dan Hotel..." required />
+                    <button type="submit" class="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            </form>
+            <div id="search-results" class="hidden mt-4 <h4 class="font-bold text-white">Hasil Pencarian:</h4>
+                <div id="results-list" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-4"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mt-12 text-center">
+        <h3 class="text-2xl font-bold">Destinasi &amp; Hotel</h3>
+        <div class="flex justify-center mt-4">
+            <a href="#destinasi" class="nav-link p-4 bg-orange-500 text-white font-bold rounded-l-full">Detinasi</a>
+            <a href="#hotel" class="bg-white p-4 rounded-r-full font-semibold nav-link">Hotel</a>
+        </div>
+    </section>
+
+    <section id="destinasi" class="section active mt-8 py-20 flex flex-col">
+        <h2 class="text-6xl font-bold text-black text-center mb-12">Destinasi Liburan</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <div class="destination" data-name="Danau Toba">
+                <a href="#" class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105 -translate-y-1">
+                    <img src="../gambar/danau_toba.jpg" alt="Danau Toba" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold">Danau Toba</h3>
+                        <p class="text-gray-600">Salah satu danau terbesar di dunia.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="destination" data-name="Bali">
+                <a href="#" class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105 -translate-y-1">
+                    <img src="../gambar/bali.jpg" alt="Bali" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold">Bali</h3>
+                        <p class="text-gray-600">Surga tropis dengan pantai yang indah.</p>
+                    </div>
+                </a>
+            </div>
+            <!-- Add more destinations as needed -->
+        </div>
+    </section>
+
+    <footer id="footer" class="bg-white dark:bg-gray-900 mt-10">
+        <!-- Footer content here -->
+    </footer>
+
+    <script src="../js/app.js"></script>
+    <script src="../js/translations.js"></script>
+</body>
+
+</html>

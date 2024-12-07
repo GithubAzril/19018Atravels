@@ -166,24 +166,27 @@
             </div>
             <h2 class="text-xl md:text-2xl font-bold mb-4 text-center">Form Pembelian</h2>
             <form id="purchaseForm" class="space-y-2">
-                <input type="text" id="name" name="name" required class="w-full p-1 md:p-2 border border-gray-300 rounded-lg" placeholder="Nama Lengkap">
-                <input type="email" id="email" name="email" required class="w-full p-1 md:p-2 border border-gray-300 rounded-lg" placeholder="Email">
+            
+                <input type="text" id="name" name="name" required class="w-full p-1 text-center md:p-2 md:text-start border border-gray-300 rounded-lg" placeholder="Nama Lengkap" >
+                <input type="email" id="email" name="email" required class="w-full p-1 text-center md:text-start md:p-2 border border-gray-300 rounded-lg" placeholder="Email">
                 <div class="flex space-x-1 md:space-x-2">
                     <input type="date" id="check-in" name="check_in" required class="flex-1 pt-2 pb-2 text-center md:p-2 md:text-start border border-gray-300 rounded-lg">
                     <input type="date" id="check-out" name="check_out" required class="flex-1 pt-2 pb-2 text-center md:p-2 md:text-start border border-gray-300 rounded-lg">
                 </div>
                 <div class="flex space-x-1 md:space-x-2 ">
-                    <input type="number" id="guests" name="guests" required class="flex-1 inset-x-0 pt-2 pb-2  text-center md:text-start md:p-2 border border-gray-300 rounded-lg" placeholder="Jumlah Tamu"  >
+                    <input type="number" id="guests" name="guests" required class="flex-1 inset-x-0 pt-2 pb-2  text-center md:text-start md:p-2 border border-gray-300 rounded-lg" placeholder="Jumlah Tamu">
                     <select id="payment-method" name="payment_method" required class="flex-1 text-sm font-light md:text-md md:font-semibold pt-2 pb-2 text-center md:text-start md:p-2 border border-gray-300 rounded-lg">
                         <option value="" disabled selected>Pilih Metode</option>
                         <option value="paypal">Paypal</option>
                         <option value="bank_transfer">Transfer Bank</option>
                     </select>
                 </div>
-                <select id="room-type" name="room_type" required class="w-full p-2 border border-gray-300 rounded-lg">
-                    <option value="" disabled selected>Tipe Kamar</option>
-                </select>
-                <input type="text" id="total-cost" name="total_cost" readonly class="w-full p-2 border border-gray-300 rounded-lg" value="Rp 0">
+                <div class="flex space-x-1">
+                    <select id="room-type" name="room_type" required class="w-full p-2 border border-gray-300 rounded-lg">
+                        <option value="" disabled selected>Tipe Kamar</option>
+                    </select>
+                    <input type="text" id="total-cost" name="total_cost" readonly class="w-full text-center p-2 border border-gray-300 rounded-lg" value="Rp 0">
+                </div>
                 <button type="button" id="submitBtn" class="w-full bg-blue-500 text-white p-2 rounded-lg">Pesan Sekarang</button>
             </form>
             <div id="qrCodeContainer" class="hidden mt-4 flex flex-col items-center justify-center text-center">

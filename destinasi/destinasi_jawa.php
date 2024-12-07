@@ -122,7 +122,7 @@
                         <p class="text-gray-500 my-2">Pesan hotel Anda sekarang untuk pengalaman terbaik!</p>
                     </div>
                     <div class="p-4 text-center">
-                        <a href="#" class="pesan-button inline-block bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors " data-destinasi=""="Pantai Parangtritis" data-normal-price="50000" data-vip-price="100000">Pesan Sekarang</a>
+                        <a href="#" class="pesan-button inline-block bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors " data-destinasi="Pantai Parangtritis" data-normal-price="50000" data-vip-price="100000">Pesan Sekarang</a>
                     </div>
                 </div>
                 <div class="bg-white shadow-lg rounded-lg overflow-hidden flex flex-col">
@@ -136,7 +136,7 @@
                         <p class="text-gray-500 my-2">Pesan hotel Anda sekarang untuk pengalaman terbaik!</p>
                     </div>
                     <div class="p-4 text-center">
-                        <a href="#" class="pesan-button inline-block bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors" data-destinasi=""="Dataran Tinggi Dieng" data-normal-price="70000" data-vip-price="140000">Pesan Sekarang</a>
+                        <a href="#" class="pesan-button inline-block bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors" data-destinasi="Dataran Tinggi Dieng" data-normal-price="70000" data-vip-price="140000">Pesan Sekarang</a>
                     </div>
                 </div>
                 <div class="bg-white shadow-lg rounded-lg overflow-hidden flex flex-col">
@@ -172,7 +172,7 @@
                     <input type="number" id="tiket" name="tiket" required class="flex-1 inset-x-0 pt-2 pb-2  text-center md:text-start md:p-2 border border-gray-300 rounded-lg" placeholder="Jumlah Tiket">
                     </div>
                     <div class="flex space-x-1 md:space-x-2 ">
-                        <input type="date" id="date" name="date" required class="flex-1 pt-2 pb-2 text-center md:p-2 md:text-start border border-gray-300 rounded-lg">
+                        <input type="date" id="tanggal" name="tanggal" required class="flex-1 pt-2 pb-2 text-center md:p-2 md:text-start border border-gray-300 rounded-lg">
                     <select id="payment-method" name="payment_method" required class="flex-1 text-sm font-light md:text-md md:font-semibold pt-2 pb-2 text-center md:text-start md:p-2 border border-gray-300 rounded-lg">
                         <option value="" disabled selected>Pilih Metode</option>
                         <option value="paypal">Paypal</option>
@@ -404,12 +404,12 @@
         $('.pesan-button').on('click', function(e) {
             e.preventDefault();
 
-            var hotelName = $(this).data('hotel');
+            var destinasiName = $(this).data('destinasi');
             var normalPrice = $(this).data('normal-price');
             var vipPrice = $(this).data('vip-price');
 
             $('#tiket-type').find('option').remove(); // Clear previous options
-            $('#tiket-type').append('<option value="" disabled selected>Pilih Tipe Kamar</option>');
+            $('#tiket-type').append('<option value="" disabled selected>Pilih Tipe Tiket</option>');
             $('#tiket-type').append('<option value="normal" data-price="' + normalPrice + '">Normal (Rp ' + normalPrice.toLocaleString() + ')</option>');
             $('#tiket-type').append('<option value="vip" data-price="' + vipPrice + '">VIP (Rp ' + vipPrice.toLocaleString() + ')</option>');
 
@@ -419,7 +419,6 @@
                 var tiketType = $('#tiket-type').val();
                 var tiket = parseInt($('#tiket').val()) || 0;
                 var tiketPrice = tiketType ? $('#tiket-type option:selected').data('price') : 0;
-
                 var totalCost = tiket * tiketPrice;
                 $('#total-cost').val(`Rp ${totalCost.toLocaleString()}`);
             });
@@ -427,33 +426,31 @@
             $('#submitBtn').off('click').on('click', function() {
                 var name = $('#name').val();
                 var email = $('#email').val();
-                var checkIn = $('#check-in').val();
-                var checkOut = $('#check-out').val();
+                var tanggal = $('#tanggal').val();
                 var tiket = $('#tiket').val();
                 var paymentMethod = $('#payment-method').val();
-                var roomType = $('#tiket-type').val();
+                var tiketType = $('#tiket-type').val();
                 var totalCost = $('#total-cost').val();
 
-                $.ajax({
-                    url: '',
+                $.ajax({ 
+                    url: '../data/save_tiket.php',
                     type: 'POST',
                     data: {
                         name: name,
                         email: email,
-                        check_in: checkIn,
-                        check_out: checkOut,
+                        tanggal: tanggal,
                         tiket: tiket,
                         payment_method: paymentMethod,
                         tiket_type: tiketType,
-                        hotel_name: hotelName,
-                        total_cost: totalCost
+                        total_cost: totalCost,
+                        destinasi_name: destinasiName
                     },
                     success: function(response) {
                         alert('Data berhasil disimpan: ' + response);
                     },
                     error: function(xhr, status, error) {
                         alert('Terjadi kesalahan: ' + error);
-                    }
+                    } 
                 });
             });
         });
@@ -464,12 +461,12 @@
     document.getElementById('submitBtn').addEventListener('click', function() {
         var name = document.getElementById('name').value;
         var email = document.getElementById('email').value;
-        var date = document.getElementById('date').value;
+        var tanggal = document.getElementById('tanggal').value;
         var tiket = document.getElementById('tiket').value;
         var paymentMethod = document.getElementById('payment-method').value;
         var tiketType = document.getElementById('tiket-type').value;
 
-        var qrData = `Nama: ${name}, Email: ${email}, Date: ${date}, Jumlah Tiket: ${tiket}, Metode Pembayaran: ${paymentMethod}, Tipe Tiket: ${tiketType}`;
+        var qrData = `Nama: ${name}, Email: ${email}, Tanggal: ${tanggal}, Jumlah Tiket: ${tiket}, Metode Pembayaran: ${paymentMethod}, Tipe Tiket: ${tiketType}`;
 
         localStorage.setItem('qrData', qrData);
 

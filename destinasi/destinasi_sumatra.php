@@ -114,7 +114,7 @@
                 <div class="bg-white shadow-lg rounded-lg overflow-hidden flex flex-col">
                     <img src="../gambar/hotel_sumatra.png" alt="Ski Dubai" class="w-full h-48 object-cover">
                     <div class="p-4 flex-grow">
-                        <h2 class="text-xl font-semibold">Swiss-Belinn Medan</h2>
+                        <h2 class="text-xl font-semibold">Danau Toba </h2>
                         <div class="flex justify-between items-center my-2">
                             <span class="text-lg font-bold text-blue-600">Rp 650.000</span>
                             <span class="text-gray-600">★ 4.6 (1,422)</span>
@@ -122,13 +122,13 @@
                         <p class="text-gray-500 my-2">Pesan hotel Anda sekarang untuk pengalaman terbaik!</p>
                     </div>
                     <div class="p-4 text-center">
-                        <a href="#" class="pesan-button inline-block bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors" data-hotel="Swiss-Belinn Medan" data-normal-price="650000" data-vip-price="1.300.000">Pesan Sekarang</a>
+                        <a href="#" class="pesan-button inline-block bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors" data-destinasi="Danau Toba" data-normal-price="65000" data-vip-price="130000">Pesan Sekarang</a>
                     </div>
                 </div>
                 <div class="bg-white shadow-lg rounded-lg overflow-hidden flex flex-col">
                     <img src="../gambar/hotel-sumatra (1).png" alt="Burj Khalifa" class="w-full h-48 object-cover">
                     <div class="p-4 flex-grow">
-                        <h2 class="text-xl font-semibold">Hotel Truntum Padang</h2>
+                        <h2 class="text-xl font-semibold">Danau Ranau </h2>
                         <div class="flex justify-between items-center my-2">
                             <span class="text-lg font-bold text-blue-600">Rp 700.000</span>
                             <span class="text-gray-600">★ 4.5 (7,886)</span>
@@ -136,13 +136,13 @@
                         <p class="text-gray-500 my-2">Pesan hotel Anda sekarang untuk pengalaman terbaik!</p>
                     </div>
                     <div class="p-4 text-center">
-                        <a href="#" class="pesan-button inline-block bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors" data-hotel="Hotel Truntum Padang" data-normal-price="700000" data-vip-price="1400000">Pesan Sekarang</a>
+                        <a href="#" class="pesan-button inline-block bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors" data-destinasi="Danau Ranau" data-normal-price="70000" data-vip-price="140000">Pesan Sekarang</a>
                     </div>
                 </div>
                 <div class="bg-white shadow-lg rounded-lg overflow-hidden flex flex-col">
                     <img src="../gambar/hotel-sumatra.png" alt="Atlantis Aquaventure" class="w-full h-48 object-cover">
                     <div class="p-4 flex-grow">
-                        <h2 class="text-xl font-semibold">Swiss-Belinn Medan</h2>
+                        <h2 class="text-xl font-semibold">Pantai Gigi Hiu</h2>
                         <div class="flex justify-between items-center my-2">
                             <span class="text-lg font-bold text-blue-600">Rp 600.000</span>
                             <span class="text-gray-600">★ 4.4 (1,949)</span>
@@ -150,13 +150,13 @@
                         <p class="text-gray-500 my-2">Pesan hotel Anda sekarang untuk pengalaman terbaik!</p>
                     </div>
                     <div class="p-4 text-center">
-                        <a href="#" class="pesan-button inline-block bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors" data-hotel="Swiss-Belinn Medan" data-normal-price="600000" data-vip-price="1200000">Pesan Sekarang</a>
+                        <a href="#" class="pesan-button inline-block bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors" data-destinasi="Pantai Gigi Hiu" data-normal-price="60000" data-vip-price="120000">Pesan Sekarang</a>
                     </div>
                 </div>
     </section>
 
 
-    <div id="purchaseModal" class="fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center hidden pt-0 md:pt-20">
+    <div id="purchaseModal" class="fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center hidden items-center pt-0 md:pt-20">
         <div class="bg-white rounded-lg shadow-lg p-6 w-11/12 md:w-1/3">
             <a href="#" id="backButton" class="flex items-center mb-4">
                 <i class="fa-solid fa-arrow-left text-gray-900 mr-2"></i> 
@@ -167,24 +167,25 @@
             </div>
             <h2 class="text-xl md:text-2xl font-bold mb-4 text-center">Form Pembelian</h2>
             <form id="purchaseForm" class="space-y-2">
-                <input type="text" id="name" name="name" required class="w-full p-1 md:p-2 border border-gray-300 rounded-lg" placeholder="Nama Lengkap">
-                <input type="email" id="email" name="email" required class="w-full p-1 md:p-2 border border-gray-300 rounded-lg" placeholder="Email">
+                <input type="text" id="name" name="name" required class="w-full p-1 text-center md:text-start md:p-2 border border-gray-300 rounded-lg" placeholder="Nama Lengkap">
+                <input type="email" id="email" name="email" required class="w-full p-1 text-center md:text-start md:p-2 border border-gray-300 rounded-lg" placeholder="Email">
                 <div class="flex space-x-1 md:space-x-2">
-                    <input type="date" id="check-in" name="check_in" required class="flex-1 pt-2 pb-2 text-center md:p-2 md:text-start border border-gray-300 rounded-lg">
-                    <input type="date" id="check-out" name="check_out" required class="flex-1 pt-2 pb-2 text-center md:p-2 md:text-start border border-gray-300 rounded-lg">
-                </div>
-                <div class="flex space-x-1 md:space-x-2 ">
-                    <input type="number" id="guests" name="guests" required class="flex-1 inset-x-0 pt-2 pb-2  text-center md:text-start md:p-2 border border-gray-300 rounded-lg" placeholder="Jumlah Tamu"  >
+                    <input type="number" id="tiket" name="tiket" required class="flex-1 inset-x-0 pt-2 pb-2  text-center md:text-start md:p-2 border border-gray-300 rounded-lg" placeholder="Jumlah Tiket">
+                    </div>
+                    <div class="flex space-x-1 md:space-x-2 ">
+                        <input type="date" id="tanggal" name="tanggal" required class="flex-1 pt-2 pb-2 text-center md:p-2 md:text-start border border-gray-300 rounded-lg">
                     <select id="payment-method" name="payment_method" required class="flex-1 text-sm font-light md:text-md md:font-semibold pt-2 pb-2 text-center md:text-start md:p-2 border border-gray-300 rounded-lg">
                         <option value="" disabled selected>Pilih Metode</option>
                         <option value="paypal">Paypal</option>
                         <option value="bank_transfer">Transfer Bank</option>
                     </select>
                 </div>
-                <select id="room-type" name="room_type" required class="w-full p-2 border border-gray-300 rounded-lg">
-                    <option value="" disabled selected>Tipe Kamar</option>
-                </select>
-                <input type="text" id="total-cost" name="total_cost" readonly class="w-full p-2 border border-gray-300 rounded-lg" value="Rp 0">
+                <div class="flex space-x-1 mb-4">
+                    <select id="tiket-type" name="tiket_type" required class="w-full p-2 border border-gray-300 rounded-lg">
+                        <option value="" disabled selected>Tipe Tiket</option>
+                    </select>
+                    <input type="text" id="total-cost" name="total_cost" readonly class="w-full p-2 border border-gray-300 rounded-lg" value="Rp 0">
+                </div>
                 <button type="button" id="submitBtn" class="w-full bg-blue-500 text-white p-2 rounded-lg">Pesan Sekarang</button>
             </form>
             <div id="qrCodeContainer" class="hidden mt-4 flex flex-col items-center justify-center text-center">
@@ -403,61 +404,57 @@ $(document).ready(function() {
     });
 </script>
 <script>
-    $(document).ready(function() {
+     $(document).ready(function() {
         $('.pesan-button').on('click', function(e) {
             e.preventDefault();
 
-            var hotelName = $(this).data('hotel');
+            var destinasiName = $(this).data('destinasi');
             var normalPrice = $(this).data('normal-price');
             var vipPrice = $(this).data('vip-price');
 
-            $('#room-type').find('option').remove(); // Clear previous options
-            $('#room-type').append('<option value="" disabled selected>Pilih Tipe Kamar</option>');
-            $('#room-type').append('<option value="normal" data-price="' + normalPrice + '">Normal (Rp ' + normalPrice.toLocaleString() + ')</option>');
-            $('#room-type').append('<option value="vip" data-price="' + vipPrice + '">VIP (Rp ' + vipPrice.toLocaleString() + ')</option>');
+            $('#tiket-type').find('option').remove(); // Clear previous options
+            $('#tiket-type').append('<option value="" disabled selected>Pilih Tipe Tiket</option>');
+            $('#tiket-type').append('<option value="normal" data-price="' + normalPrice + '">Normal (Rp ' + normalPrice.toLocaleString() + ')</option>');
+            $('#tiket-type').append('<option value="vip" data-price="' + vipPrice + '">VIP (Rp ' + vipPrice.toLocaleString() + ')</option>');
 
             $('#purchaseModal').removeClass('hidden');
 
-            $('#room-type, #guests').on('change', function() {
-                var roomType = $('#room-type').val();
-                var guests = parseInt($('#guests').val()) || 0;
-                var roomPrice = roomType ? $('#room-type option:selected').data('price') : 0;
-
-                // Hitung total biaya
-                var totalCost = guests * roomPrice;
+            $('#tiket-type, #tiket').on('change', function() {
+                var tiketType = $('#tiket-type').val();
+                var tiket = parseInt($('#tiket').val()) || 0;
+                var tiketPrice = tiketType ? $('#tiket-type option:selected').data('price') : 0;
+                var totalCost = tiket * tiketPrice;
                 $('#total-cost').val(`Rp ${totalCost.toLocaleString()}`);
             });
 
             $('#submitBtn').off('click').on('click', function() {
                 var name = $('#name').val();
                 var email = $('#email').val();
-                var checkIn = $('#check-in').val();
-                var checkOut = $('#check-out').val();
-                var guests = $('#guests').val();
+                var tanggal = $('#tanggal').val();
+                var tiket = $('#tiket').val();
                 var paymentMethod = $('#payment-method').val();
-                var roomType = $('#room-type').val();
+                var tiketType = $('#tiket-type').val();
                 var totalCost = $('#total-cost').val();
 
-                $.ajax({
-                    url: '../data/save_booking.php',
+                $.ajax({ 
+                    url: '../data/save_tiket.php',
                     type: 'POST',
                     data: {
                         name: name,
                         email: email,
-                        check_in: checkIn,
-                        check_out: checkOut,
-                        guests: guests,
+                        tanggal: tanggal,
+                        tiket: tiket,
                         payment_method: paymentMethod,
-                        room_type: roomType,
-                        hotel_name: hotelName,
-                        total_cost: totalCost
+                        tiket_type: tiketType,
+                        total_cost: totalCost,
+                        destinasi_name: destinasiName
                     },
                     success: function(response) {
                         alert('Data berhasil disimpan: ' + response);
                     },
                     error: function(xhr, status, error) {
                         alert('Terjadi kesalahan: ' + error);
-                    }
+                    } 
                 });
             });
         });
@@ -468,13 +465,12 @@ $(document).ready(function() {
     document.getElementById('submitBtn').addEventListener('click', function() {
         var name = document.getElementById('name').value;
         var email = document.getElementById('email').value;
-        var checkIn = document.getElementById('check-in').value;
-        var checkOut = document.getElementById('check-out').value;
-        var guests = document.getElementById('guests').value;
+        var tanggal = document.getElementById('tanggal').value;
+        var tiket = document.getElementById('tiket').value;
         var paymentMethod = document.getElementById('payment-method').value;
-        var roomType = document.getElementById('room-type').value;
+        var tiketType = document.getElementById('tiket-type').value;
 
-        var qrData = `Nama: ${name}, Email: ${email}, Check-In: ${checkIn}, Check-Out: ${checkOut}, Jumlah Tamu: ${guests}, Metode Pembayaran: ${paymentMethod}, Tipe Kamar: ${roomType}`;
+        var qrData = `Nama: ${name}, Email: ${email}, Tanggal: ${tanggal}, Jumlah Tiket: ${tiket}, Metode Pembayaran: ${paymentMethod}, Tipe Tiket: ${tiketType}`;
 
         localStorage.setItem('qrData', qrData);
 
@@ -494,15 +490,15 @@ $(document).ready(function() {
     $(document).ready(function() {
         const prices = {
             normal: 500000,
-            vip: 1000000
+            vip: 100000
         };
 
-        $('#guests, #room-type').on('change', function() {
-            const guests = parseInt($('#guests').val()) || 0;
-            const roomType = $('#room-type').val();
-            const pricePerNight = prices[roomType] || 0;
+        $('#tiket, #tiket-type').on('change', function() {
+            const tiket = parseInt($('#tiket').val()) || 0;
+            const tiketType = $('#tiket-type').val();
+            const tiketPerHari = prices[tiketType] || 0;
 
-            const totalCost = guests * pricePerNight;
+            const totalCost = tiket * tiketType;
             $('#total-cost').val(`Rp ${totalCost.toLocaleString()}`);
         });
 

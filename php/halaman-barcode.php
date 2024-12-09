@@ -131,7 +131,6 @@
     </div>
 
 
-
     <footer class="bg-white dark:bg-gray-900 mt-10">
         <div class="mx-auto w-full max-w-screen">
             <div class="grid grid-cols-2  gap-12 px-12 py-6 lg:py-8 md:grid-cols-4">

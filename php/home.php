@@ -21,7 +21,7 @@
                     <img src="../gambar/logo.png" class="h-12 w-auto md:h-16" alt="Logo" />
                 </a>
                 <div class="flex md:order-2 space-x-6">
-                    <div class="flex space-x-4 items-center">
+                    <div class="flex  items-center">
                         <div class="language-container" style="position: relative;">
                             <a href="#" class="items-center mt-1 text-white text-xl" id="language-toggle">
                                 <i class="fa-solid fa-globe"></i>
@@ -32,6 +32,10 @@
                                     <a href="#" class="language-option block rounded-b py-1 px-4" data-lang="en">Inggris</a>
                                 </div>
                             </div>
+                        </div>
+                        <div class="flex space-x-8">
+                            <a href="" id="daftar-button" class="relative rounded-r-full py-1 font-semibold px-4 bg-blue-400 ml-[5.8rem] text-white ">Daftar</a>
+                            <a href="" id="login-button" class="absolute rounded-full py-1 bg-blue-800 px-4 font-semibold text-white">Login</a>
                         </div>
                     </div>
                     <button data-collapse-toggle="navbar-search" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-search" aria-expanded="false">
@@ -44,7 +48,7 @@
                 <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-search">
                     <div class="flex flex-col p-4 md:p-0 mt-2 font-semibold md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-3">
                         <a href="../php/home.php" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:p-0 md:dark:" aria-current="page" id="nav-home">Beranda</a>
-                        <button id="mega-menu-dropdown-button" data-dropdown-toggle="mega-menu-dropdown" class="flex items-center justify-between w-full py-2 px-3 font-medium text-gray-900 border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700" >Hotel <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                        <button id="mega-menu-dropdown-button" data-dropdown-toggle="mega-menu-dropdown" class="flex items-center justify-between w-full py-2 px-3 font-medium text-gray-900 border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">Hotel <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" />
                             </svg></button>
                         <div id="mega-menu-dropdown" class="hidden absolute z-10 bg-white rounded-lg shadow-lg w-48 mt-12">
@@ -60,7 +64,7 @@
                             </div>
                         </div>
                         <div class="relative inline-block">
-                            <button id="wisata-menu-dropdown-button" id="wisata-drop" data-dropdown-toggle="wisata-menu-dropdown" class="flex items-center justify-between w-full py-2 px-3 font-medium text-gray-900 border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700" >Destinasi<svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                            <button id="wisata-menu-dropdown-button" id="wisata-drop" data-dropdown-toggle="wisata-menu-dropdown" class="flex items-center justify-between w-full py-2 px-3 font-medium text-gray-900 border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">Destinasi<svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" />
                                 </svg></button>
                             <div id="wisata-menu-dropdown" class="hidden absolute bg-white rounded-lg shadow-lg w-48 mt-6">
@@ -82,6 +86,7 @@
             </div>
         </nav>
     </header>
+
 
     <section class=" bg-[url('../gambar/background.png')] dark:bg-[url('../gambar/background.png')] bg-cover bg-center w-full p-5 md:p-10 lg:p-10">
         <div class=" mx-auto max-w-screen-xl text-center lg:py-20 relative">
@@ -253,6 +258,89 @@
             </section>
         </div>
     </section>
+
+    <section>
+        <div id="login-modal" class="hidden pt-12 fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+            <div class="rounded-lg shadow-lg flex overflow-hidden max-w-4xl w-full">
+                <a href="#" id="backButton" class=" absolute m-4 flex items-center ">
+                    <i class="fa-solid fa-arrow-left text-white mr-2"></i>
+                    <span class="text-white font-semibold">Kembali</span>
+                </a>
+                <div class="bg-cover bg-center w-1/2 p-10 flex-1 flex flex-col items-center justify-center" style="background-image: url('../gambar/ilustrasi destinasi (3).png');  object-fit:cover;">
+                </div>
+                <div class="bg-gray-800 text-white p-12 flex-1 flex flex-col justify-center">
+                    <div class="mb-6 text-center">
+                        <img alt="Logo" class="mb-4 rounded-full " src="../gambar/logo.png" width="140" />
+                        <h2 class="text-2xl font-bold">Selamat Datang</h2>
+                        <p class="text-gray-400 font-semibold">Login Terlebih Dahulu</p>
+                    </div>
+                    <form method="POST">
+                        <div class="mb-4">
+                            <label class="block text-white text-sm font-medium text-gray-400" for="username">Username</label>
+                            <input id="username" name="username" class="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-gray-500" type="text" placeholder="Username" required />
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-white text-sm font-medium text-gray-400" for="password">Password</label>
+                            <input name="password" class="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-gray-500" id="password" type="password" placeholder="Password" required />
+                        </div>
+                        <div class="flex items-center justify-between mb-6">
+                            <label class="flex items-center text-sm text-gray-400">
+                                <input type="checkbox" id="show-password" class="form-checkbox bg-gray-700 border-gray-600 text-gray-500" onclick="togglePasswordVisibility()" />
+                                <span class="ml-2">Tampilkan Password</span>
+                            </label>
+                        </div>
+                        <button class="w-full py-2 bg-white text-gray-800 rounded-md font-semibold hover:bg-gray-200" type="submit">Log in</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div id="daftar-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+            <div class="rounded-lg shadow-lg flex overflow-hidden max-w-4xl w-full">
+                <a href="#" id="backButton" class="absolute m-4 flex items-center">
+                    <i class="fa-solid fa-arrow-left text-white mr-2"></i>
+                    <span class="text-white font-semibold">Kembali</span>
+                </a>
+                <div class="bg-cover bg-center w-1/2 p-10 flex-1 flex flex-col items-center justify-center" style="background-image: url('../gambar/ilustrasi destinasi (3).png'); object-fit:cover;">
+                </div>
+                <div class="bg-gray-800 text-white p-12 flex-1 flex flex-col justify-center">
+                    <div class="mb-6 text-center">
+                        <img alt="Logo" class="mb-4 rounded-full" src="../gambar/logo.png" width="140" />
+                        <h2 class="text-2xl font-bold">Daftar Akun</h2>
+                        <p class="text-gray-400 font-semibold">Isi form di bawah ini untuk mendaftar</p>
+                    </div>
+                    <form method="POST">
+                        <div class="mb-4">
+                            <label class="block text-white text-sm font-medium text-gray-400" for="username">Username</label>
+                            <input id="username" name="username" class="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-gray-500" type="text" placeholder="Username" required />
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-white text-sm font-medium text-gray-400" for="email">Email</label>
+                            <input id="email" name="email" class="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-gray-500" type="email" placeholder="Email" required />
+                        </div>
+                        <div class="flex space-x-4">
+                            <div class="mb-4">
+                                <label class="block text-white text-sm font-medium text-gray-400" for="password">Password</label>
+                                <input name="password" class="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-gray-500" id="password" type="password" placeholder="Password" required />
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-white text-sm font-medium text-gray-400" for="confirm-password">Konfirmasi Password</label>
+                                <input name="confirm-password" class="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-gray-500" id="confirm-password" type="password" placeholder="Konfirmasi Password" required />
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mb-6">
+                            <label class="flex items-center text-sm text-gray-400">
+                                <input type="checkbox" id="show-password" class="form-checkbox bg-gray-700 border-gray-600 text-gray-500" />
+                                <span class="ml-2">Tampilkan Password</span>
+                            </label>
+                        </div>
+                        <button class="w-full py-2 bg-white text-gray-800 rounded-md font-semibold hover:bg-gray-200" type="submit">Daftar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="mt-16 bg-black text-white pt-8 pb-8">
         <h3 id="exclusive" class="text-2xl text-center md:text-start font-bold ">
             Exclusive
@@ -262,7 +350,7 @@
         </h2>
         <div class="flex items-start">
             <div class="flex overflow-x-auto space-x-4 p-4 draggable" id="card-container">
-                <div class="flex space-x-4 text-black ">
+                <div id="hotel-container" class="flex space-x-4 text-black ">
                     <a href="#" class="bg-white rounded-3xl shadow-lg p-4 w-64 relative">
                         <div class="flex flex-col items-center justify-center">
                             <img alt="Hotel Grand Orchid Solo" class="rounded-2xl" height="150" src="https://storage.googleapis.com/a1aa/image/u92qlJzeBmz9daiXVeqxVdNABFtCo2zZfiin8nVxN74kPmrnA.jpg" width="200" />
@@ -407,17 +495,87 @@
 </body>
 <script>
     $(document).ready(function() {
+        $('#show-password').change(function() {
+            const passwordInput = $('#password');
+            const confirmPasswordInput = $('#confirm-password');
+            if ($(this).is(':checked')) {
+                passwordInput.attr('type', 'text'); // Ubah tipe input menjadi text
+                confirmPasswordInput.attr('type', 'text'); // Ubah tipe konfirmasi input menjadi text
+            } else {
+                passwordInput.attr('type', 'password'); // Kembalikan tipe input menjadi password
+                confirmPasswordInput.attr('type', 'password'); // K embalikan tipe konfirmasi input menjadi password
+            }
+        });
+    });
+</script>
+<script>
+    $(document).ready(function() {
+        $('#daftar-button').click(function(event) {
+            event.preventDefault(); // Mencegah aksi default link
+            $('#daftar-modal').removeClass('hidden'); // Menampilkan modal
+        });
+
+        $('#backButton').click(function(event) {
+            event.preventDefault(); // Mencegah aksi default link
+            $('#daftar-modal').addClass('hidden'); // Menyembunyikan modal
+        });
+    });
+</script>
+<script>
+    $($document).ready(function() {
+        $('#show-password').change(function() {
+            const passwordInput = $('password');
+            if ($(this).is(':checked')) {
+                passwordInput.attr('type', 'text');
+            } else {
+                passwordInput.attr('type', 'password');
+            }
+        });
+    });
+</script>
+<script>
+    $(document).ready(function() {
+        $('#backButton').on('click', function(e) {
+            e.preventDefault();
+            $('#login-modal').addClass('hidden');
+        });
+    });
+</script>
+<script>
+    $(document).ready(function() {
+        // Menangani klik pada tombol Login
+        $('#login-button').on('click', function(e) {
+            e.preventDefault(); // Mencegah perilaku default dari tautan
+            $('#login-modal').toggleClass('hidden'); // Tampilkan atau sembunyikan modal login
+        });
+
+        // Menangani klik di luar modal untuk menutup modal
+        $(document).on('click', function(event) {
+            if (!$(event.target).closest('#login-modal').length && !$(event.target).closest('#login-button').length) {
+                $('#login-modal').addClass('hidden'); // Sembunyikan modal login
+            }
+        });
+    });
+
+    function togglePasswordVisibility() {
+        const passwordInput = document.getElementById('password');
+        const showPasswordCheckbox = document.getElementById('show-password');
+        passwordInput.type = showPasswordCheckbox.checked ? 'text' : 'password';
+    }
+</script>
+<script>
+    $(document).ready(function() {
         // Menangani klik pada hamburger menu untuk menampilkan menu
         $('button[data-collapse-toggle="navbar-search"]').on('click', function() {
             $('#navbar-search').toggleClass('hidden');
         });
 
-    $(document).on('click', function(event) {
-        if (!$(event.target).closest('button[data-collapse-toggle="navbar-search"]').length && !$(event.target).closest('#navbar-search').length) {
-            $('#navbar-search').addClass('hidden');
-        }
+        $(document).on('click', function(event) {
+            if (!$(event.target).closest('button[data-collapse-toggle="navbar-search"]').length && !$(event.target).closest('#navbar-search').length) {
+                $('#navbar-search').addClass('hidden');
+            }
+        });
     });
-});
 </script>
 <script>
     $(document).ready(function() {
@@ -578,9 +736,9 @@
             const query = $(this).val().toLowerCase();
             const results = destinations.filter(destination => destination.name.toLowerCase().includes(query));
             const resultsList = $('#results-list');
-            resultsList.empty(); 
+            resultsList.empty();
 
-            if (query.length > 0) { 
+            if (query.length > 0) {
                 if (results.length > 0) {
                     results.forEach(result => {
                         resultsList.append(`
@@ -609,7 +767,7 @@
         const translations = {
             en: {
                 title: "Do you want to vacation today?",
-                deskripsi:"Are you ready for adventure? Discover the best destinations, enjoy exclusive offers, and make memories that will last a lifetime!",
+                deskripsi: "Are you ready for adventure? Discover the best destinations, enjoy exclusive offers, and make memories that will last a lifetime!",
                 Destinasi: "Destinations",
                 destinations: "Vacation Destinations",
                 hotels: "Hotels",
@@ -635,7 +793,7 @@
             },
             id: {
                 title: "Apakah anda ingin berlibur hari ini?",
-                deskripsi:"Apakah Anda siap untuk berpetualang? Temukan destinasi terbaik, nikmati penawaran eksklusif, dan buat kenangan yang akan bertahan seumur hidup !!!",
+                deskripsi: "Apakah Anda siap untuk berpetualang? Temukan destinasi terbaik, nikmati penawaran eksklusif, dan buat kenangan yang akan bertahan seumur hidup !!!",
                 Destinasi: "Destinasi",
                 destinations: "Destinasi Liburan",
                 hotels: "Hotel",

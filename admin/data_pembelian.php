@@ -14,7 +14,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
 </head>
-
 <body>
     <nav class="fixed top-0 z-50 w-full bg-white border-b border-blue-200 dark:bg-blue-800 dark:border-blue-700">
         <div class="px-3 py-3 lg:px-5 lg:pl-3">
@@ -33,7 +32,6 @@
                 </div>
             </div>
     </nav>
-
     <main id="post" class="fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-white border-r border-blue-200 sm:translate-x-0 dark:bg-blue-800 dark:border-gray-700" aria-label="Sidebar">
         <div class="h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-blue-800">
             <ul class="space-y-2 font-medium">
@@ -44,19 +42,25 @@
                     </a>
                 </li>
                 <li>
-                    <a href="../admin/data_pembelian.php" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                    <a href="../admin/data.php" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                         <i class="fa-solid fa-chart-column"></i>
                         <span class="flex-1 ms-3 whitespace-nowrap">Data Pembelian</span>
                     </a>
                 </li>
                 <li>
-                    <a href="../admin/card_hotel.php" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                    <a href="../admin/data-login.php" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                        <i class="fa-regular fa-user"></i>
+                        <span class="flex-1 ms-3 whitespace-nowrap">User login</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../admin/admin-pengurus.php" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                         <i class="fa-solid fa-hotel"></i>
                         <span class="flex-1 ms-3 whitespace-nowrap">Booking Hotel</span>
                     </a>
                 </li>
                 <li>
-                    <a href="../admin/card_destinasi.php" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                    <a href="../admin/berita.php" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                         <i class="fa-solid fa-ticket"></i>
                         <span class="flex-1 ms-3 whitespace-nowrap">Tiket Destiansi</span>
                     </a>
@@ -81,7 +85,5 @@
             </div>
         </div>
     </div>
-
 </body>
-
 </html>

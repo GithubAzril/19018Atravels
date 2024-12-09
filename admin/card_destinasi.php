@@ -44,19 +44,25 @@
                     </a>
                 </li>
                 <li>
-                    <a href="../admin/data_pembelian.php" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                    <a href="../admin/data.php" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                         <i class="fa-solid fa-chart-column"></i>
                         <span class="flex-1 ms-3 whitespace-nowrap">Data Pembelian</span>
                     </a>
                 </li>
                 <li>
-                    <a href="../admin/card_hotel.php" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                    <a href="../admin/data-login.php" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                        <i class="fa-regular fa-user"></i>
+                        <span class="flex-1 ms-3 whitespace-nowrap">User login</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../admin/admin-pengurus.php" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                         <i class="fa-solid fa-hotel"></i>
                         <span class="flex-1 ms-3 whitespace-nowrap">Booking Hotel</span>
                     </a>
                 </li>
                 <li>
-                    <a href="../admin/card_destinasi.php" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                    <a href="../admin/berita.php" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                         <i class="fa-solid fa-ticket"></i>
                         <span class="flex-1 ms-3 whitespace-nowrap">Tiket Destiansi</span>
                     </a>
@@ -81,6 +87,8 @@
             </div>
         </div>
     </div>
+
+
 
 </body>
 

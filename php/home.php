@@ -33,9 +33,41 @@
                                 </div>
                             </div>
                         </div>
+                        <div id="avatar-container" class="flex hidden ml-12  items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                            <button type="button" class="flex text-sm bg-gray-800 rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
+                                <span class="sr-only">Open user menu</span>
+                                <img class="w-8 h-8 rounded-full" src="../gambar/bali.png" alt="user photo">
+                            </button>
+                            <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600" id="user-dropdown">
+                                <div class="px-4 py-3">
+                                    <span class="block text-sm text-gray-900 dark:text-white">Bonnie Green</span>
+                                    <span class="block text-sm  text-gray-500 truncate dark:text-gray-400">name@flowbite.com</span>
+                                </div>
+                                <ul class="py-2" aria-labelledby="user-menu-button">
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Dashboard</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Settings</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Earnings</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign out</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <button data-collapse-toggle="navbar-user" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-user" aria-expanded="false">
+                                <span class="sr-only">Open main menu</span>
+                                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
+                                </svg>
+                            </button>
+                        </div>
                         <div class="flex space-x-8">
                             <a href="" id="daftar-button" class="relative rounded-r-full py-1 font-semibold px-4 bg-blue-400 ml-[5.8rem] text-white ">Daftar</a>
-                            <a href="" id="login-button" class="absolute rounded-full py-1 bg-blue-800 px-4 font-semibold text-white">Login</a>
+                            <a href="" id="login-button" class="absolute rounded-full py-1 bg-blue-800 px-4 font-semibold text-white">Log in</a>
                         </div>
                     </div>
                     <button data-collapse-toggle="navbar-search" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-search" aria-expanded="false">
@@ -274,14 +306,14 @@
                         <h2 class="text-2xl font-bold">Selamat Datang</h2>
                         <p class="text-gray-400 font-semibold">Login Terlebih Dahulu</p>
                     </div>
-                    <form method="POST">
+                    <form action="../koneksi/login.php" method="POST">
                         <div class="mb-4">
                             <label class="block text-white text-sm font-medium text-gray-400" for="username">Username</label>
-                            <input id="username" name="username" class="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-gray-500" type="text" placeholder="Username" required />
+                            <input id="login-username" name="username" class="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-gray-500" type="text" placeholder="Username" required autocomplete="username" />
                         </div>
                         <div class="mb-4">
                             <label class="block text-white text-sm font-medium text-gray-400" for="password">Password</label>
-                            <input name="password" class="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-gray-500" id="password" type="password" placeholder="Password" required />
+                            <input name="login-password" class="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-gray-500" id="login-password" type="password" placeholder="Password" required autocomplete="current-password" />
                         </div>
                         <div class="flex items-center justify-between mb-6">
                             <label class="flex items-center text-sm text-gray-400">
@@ -298,7 +330,7 @@
     <section>
         <div id="daftar-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
             <div class="rounded-lg shadow-lg flex overflow-hidden max-w-4xl w-full">
-                <a href="#" id="backButton" class="absolute m-4 flex items-center">
+                <a href="#" id="kembaliButton" class="absolute m-4 flex items-center">
                     <i class="fa-solid fa-arrow-left text-white mr-2"></i>
                     <span class="text-white font-semibold">Kembali</span>
                 </a>
@@ -310,28 +342,22 @@
                         <h2 class="text-2xl font-bold">Daftar Akun</h2>
                         <p class="text-gray-400 font-semibold">Isi form di bawah ini untuk mendaftar</p>
                     </div>
-                    <form method="POST">
+                    <form id="daftar-form" method="POST">
                         <div class="mb-4">
                             <label class="block text-white text-sm font-medium text-gray-400" for="username">Username</label>
-                            <input id="username" name="username" class="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-gray-500" type="text" placeholder="Username" required />
+                            <input id="username" name="username" class="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-gray-500" type="text" placeholder="Username" required autocomplete="username" />
                         </div>
                         <div class="mb-4">
                             <label class="block text-white text-sm font-medium text-gray-400" for="email">Email</label>
-                            <input id="email" name="email" class="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-gray-500" type="email" placeholder="Email" required />
+                            <input id="email" name="email" class="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-gray-500" type="email" placeholder="Email" required autocomplete="email" />
                         </div>
-                        <div class="flex space-x-4">
-                            <div class="mb-4">
-                                <label class="block text-white text-sm font-medium text-gray-400" for="password">Password</label>
-                                <input name="password" class="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-gray-500" id="password" type="password" placeholder="Password" required />
-                            </div>
-                            <div class="mb-4">
-                                <label class="block text-white text-sm font-medium text-gray-400" for="confirm-password">Konfirmasi Password</label>
-                                <input name="confirm-password" class="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-gray-500" id="confirm-password" type="password" placeholder="Konfirmasi Password" required />
-                            </div>
+                        <div class="mb-4">
+                            <label class="block text-white text-sm font-medium text-gray-400" for="password">Password</label>
+                            <input name="password" class="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-gray-500" id="password" type="password" placeholder="Password" required autocomplete="new-password" />
                         </div>
                         <div class="flex items-center justify-between mb-6">
                             <label class="flex items-center text-sm text-gray-400">
-                                <input type="checkbox" id="show-password" class="form-checkbox bg-gray-700 border-gray-600 text-gray-500" />
+                                <input type="checkbox" id="lihat-password" class="form-checkbox bg-gray-700 border-gray-600 text-gray-500" />
                                 <span class="ml-2">Tampilkan Password</span>
                             </label>
                         </div>
@@ -455,7 +481,7 @@
                     </ul>
                 </div>
                 <div>
-                    <h2 id="footer-language" class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Bahasa :</h2>
+                    <h2 id="footer-language" class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-wh ite">Bahasa :</h2>
                     <ul class="text-gray-500 dark:text-gray-400 font-medium">
                         <li class="mb-4">
                             <a href="#" class="hover:underline">Indonesia</a>
@@ -495,19 +521,40 @@
 </body>
 <script>
     $(document).ready(function() {
-        $('#show-password').change(function() {
-            const passwordInput = $('#password');
-            const confirmPasswordInput = $('#confirm-password');
+        $('#lihat-password').change(function() {
+            const passwordInput = $('#password'); // Ambil input password
             if ($(this).is(':checked')) {
                 passwordInput.attr('type', 'text'); // Ubah tipe input menjadi text
-                confirmPasswordInput.attr('type', 'text'); // Ubah tipe konfirmasi input menjadi text
             } else {
                 passwordInput.attr('type', 'password'); // Kembalikan tipe input menjadi password
-                confirmPasswordInput.attr('type', 'password'); // K embalikan tipe konfirmasi input menjadi password
+            }
+        });
+        // Menangani klik pada tombol Daftar untuk menampilkan modal
+        $('#daftar-button').click(function(event) {
+            event.preventDefault(); // Mencegah aksi default link
+            $('#daftar-modal').removeClass('hidden'); // Menampilkan modal
+        });
+
+        // Menangani klik pada tombol Kembali di modal pendaftaran
+        $('#kembaliButton').click(function(event) {
+            event.preventDefault(); // Mencegah aksi default link
+            $('#daftar-modal').addClass('hidden'); // Menyembunyikan modal
+        });
+    });
+</script>
+<script>
+    $(document).ready(function() {
+        $('#show-password').change(function() {
+            const passwordInput = $('#login-password');
+            if ($(this).is(':checked')) {
+                passwordInput.attr('type', 'text'); // Ubah tipe input menjadi text
+            } else {
+                passwordInput.attr('type', 'password'); // Kembalikan tipe input menjadi password
             }
         });
     });
 </script>
+
 <script>
     $(document).ready(function() {
         $('#daftar-button').click(function(event) {
@@ -518,18 +565,6 @@
         $('#backButton').click(function(event) {
             event.preventDefault(); // Mencegah aksi default link
             $('#daftar-modal').addClass('hidden'); // Menyembunyikan modal
-        });
-    });
-</script>
-<script>
-    $($document).ready(function() {
-        $('#show-password').change(function() {
-            const passwordInput = $('password');
-            if ($(this).is(':checked')) {
-                passwordInput.attr('type', 'text');
-            } else {
-                passwordInput.attr('type', 'password');
-            }
         });
     });
 </script>
@@ -558,10 +593,40 @@
     });
 
     function togglePasswordVisibility() {
-        const passwordInput = document.getElementById('password');
+        const passwordInput = document.getElementById('password1');
         const showPasswordCheckbox = document.getElementById('show-password');
         passwordInput.type = showPasswordCheckbox.checked ? 'text' : 'password';
     }
+</script>
+
+<script>
+    $(document).ready(function() {
+        $('#daftar-form').on('submit', function(event) {
+            event.preventDefault();
+            $.ajax({
+                url: '../koneksi/daftar.php',
+                type: 'POST',
+                data: $(this).serialize(),
+                dataType: 'json',
+                success: function(response) {
+                    if (response.success) {
+                        alert('Selamat Anda berhasil mendaftar');
+                        $('#daftar-modal').addClass('hidden');
+                        $('#daftar-button').hide();
+                        $('#login-button').hide();
+                        $('#avatar-container').removeClass('hidden');
+                        $('#user-name').text(response.username);
+                    } else {
+                        alert(response.message);
+                    }
+                },
+                error: function() {
+                    alert('Terjadi kesalahan. Silakan coba lagi.');
+
+                }
+            });
+        });
+    });
 </script>
 <script>
     $(document).ready(function() {

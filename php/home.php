@@ -601,6 +601,15 @@
 
 <script>
     $(document).ready(function() {
+        // Cek apakah pengguna sudah terdaftar
+        if (sessionStorage.getItem('isLoggedIn')) {
+            $('#daftar-modal').addClass('hidden');
+            $('#daftar-button').hide();
+            $('#login-button').hide();
+            $('#avatar-container').removeClass('hidden');
+            $('#user-name').text(sessionStorage.getItem('username'));
+        }
+
         $('#daftar-form').on('submit', function(event) {
             event.preventDefault();
             $.ajax({
@@ -616,13 +625,16 @@
                         $('#login-button').hide();
                         $('#avatar-container').removeClass('hidden');
                         $('#user-name').text(response.username);
+
+                        // Simpan status login di sessionStorage
+                        sessionStorage.setItem('isLoggedIn', true);
+                        sessionStorage.setItem('username', response.username);
                     } else {
                         alert(response.message);
                     }
                 },
                 error: function() {
                     alert('Terjadi kesalahan. Silakan coba lagi.');
-
                 }
             });
         });

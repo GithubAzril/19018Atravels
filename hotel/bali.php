@@ -15,7 +15,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
     <link rel="stylesheet" href="../css/style.css">
 </head>
-
 <body>
 <header>
     <nav class="bg-white border-gray-200 dark:bg-gray-900 w-full z-20">

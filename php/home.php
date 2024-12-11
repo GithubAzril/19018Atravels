@@ -157,10 +157,6 @@
                     <i class="fas fa-calendar-alt text-orange-500"></i>
                     <span class="text-sm sm:text-base">29 Oct 24 - 30 Oct 24</span>
                 </div>
-                <div class="flex items-center space-x-2">
-                    <i class="fas fa-user-friends text-orange-500"></i>
-                    <span class="text-sm sm:text-base">2 Adults, 1 Room</span>
-                </div>
             </div>
     </section>
     <section class="mt-12 text-center ">
@@ -306,7 +302,7 @@
                         <h2 class="text-2xl font-bold">Selamat Datang</h2>
                         <p class="text-gray-400 font-semibold">Login Terlebih Dahulu</p>
                     </div>
-                    <form action="../koneksi/login.php" method="POST">
+                    <form id="login-form" method="POST">
                         <div class="mb-4">
                             <label class="block text-white text-sm font-medium text-gray-400" for="username">Username</label>
                             <input id="login-username" name="username" class="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-gray-500" type="text" placeholder="Username" required autocomplete="username" />
@@ -377,7 +373,7 @@
         <div class="flex items-start">
             <div class="flex overflow-x-auto space-x-4 p-4 draggable" id="card-container">
                 <div id="hotel-container" class="flex space-x-4 text-black ">
-                    <a href="#" class="bg-white rounded-3xl shadow-lg p-4 w-64 relative">
+                    <a href="../hotel/jawa.php?hotel=Hotel%20Grand%20Orchid%20Solo&discount=25&originalPrice=200000" class="bg-white rounded-3xl shadow-lg p-4 w-64 relative">
                         <div class="flex flex-col items-center justify-center">
                             <img alt="Hotel Grand Orchid Solo" class="rounded-2xl" height="150" src="https://storage.googleapis.com/a1aa/image/u92qlJzeBmz9daiXVeqxVdNABFtCo2zZfiin8nVxN74kPmrnA.jpg" width="200" />
                         </div>
@@ -391,7 +387,7 @@
                             <span class="font-bold">Diskon: 25%</span>
                         </div>
                     </a>
-                    <a href="#" class="bg-white rounded-3xl shadow-lg p-4 w-64 relative">
+                    <a href="../hotel/kalimantan.php?hotel=Swiss-Belhotel%20Danum%20Palangka%20Raya&discount=10&originalPrice=700000" class="bg-white rounded-3xl shadow-lg p-4 w-64 relative">
                         <div class="flex flex-col items-center justify-center">
                             <img alt="Swiss-Belhotel Danum Palangka Raya" class="rounded-2xl" height="150" src="../gambar/kamar.png" width="200" />
                         </div>
@@ -405,7 +401,7 @@
                             <span class="font-bold">Diskon: 10%</span>
                         </div>
                     </a>
-                    <a href="#" class="bg-white rounded-3xl shadow-lg p-4 w-64 relative">
+                    <a href="../hotel/sumatra.php?hotel=Hotel%20Truntum%20Padang&discount=15&originalPrice=650000" class="bg-white rounded-3xl shadow-lg p-4 w-64 relative">
                         <div class="flex flex-col items-center justify-center">
                             <img alt="Hotel Truntum Padang" class="rounded-2xl" height="150" src="../gambar/kamar2.png" width="200" />
                         </div>
@@ -419,7 +415,7 @@
                             <span class="font-bold">Diskon: 15%</span>
                         </div>
                     </a>
-                    <a href="#" class="bg-white rounded-3xl shadow-lg p-4 w-64 relative">
+                    <a href="../hotel/bali.php?hotel=favehotel%20-%20Kartika%20Plaza%20Kuta&discount=20&originalPrice=800000" class="bg-white rounded-3xl shadow-lg p-4 w-64 relative">
                         <div class="flex flex-col items-center justify-center">
                             <img alt="favehotel - Kartika Plaza Kuta" class="rounded-2xl" height="150" src="https://storage.googleapis.com/a1aa/image/MQieCFYDfguAh0leB4A6sUefbxxVbbee6EsmQeCRWm9K1Hz1TA.jpg" width="200" />
                         </div>
@@ -433,7 +429,7 @@
                             <span class="font-bold">Diskon: 20%</span>
                         </div>
                     </a>
-                    <a href="#" class="bg-white rounded-3xl shadow-lg p-4 w-64 relative">
+                    <a href="hote/papua .php?hotel=Swiss-Belhotel%20Papua&discount=15&originalPrice=750000" class="bg-white rounded-3xl shadow-lg p-4 w-64 relative">
                         <div class="flex flex-col items-center justify-center">
                             <img alt="favehotel - Kartika Plaza Kuta" class="rounded-2xl" height="150" src="https://storage.googleapis.com/a1aa/image/MQieCFYDfguAh0leB4A6sUefbxxVbbee6EsmQeCRWm9K1Hz1TA.jpg" width="200" />
                         </div>
@@ -578,7 +574,6 @@
 </script>
 <script>
     $(document).ready(function() {
-        // Menangani klik pada tombol Login
         $('#login-button').on('click', function(e) {
             e.preventDefault(); // Mencegah perilaku default dari tautan
             $('#login-modal').toggleClass('hidden'); // Tampilkan atau sembunyikan modal login
@@ -593,7 +588,7 @@
     });
 
     function togglePasswordVisibility() {
-        const passwordInput = document.getElementById('password1');
+        const passwordInput = document.getElementById('password');
         const showPasswordCheckbox = document.getElementById('show-password');
         passwordInput.type = showPasswordCheckbox.checked ? 'text' : 'password';
     }
@@ -601,7 +596,7 @@
 
 <script>
     $(document).ready(function() {
-        // Cek apakah pengguna sudah terdaftar
+
         if (sessionStorage.getItem('isLoggedIn')) {
             $('#daftar-modal').addClass('hidden');
             $('#daftar-button').hide();
@@ -609,6 +604,32 @@
             $('#avatar-container').removeClass('hidden');
             $('#user-name').text(sessionStorage.getItem('username'));
         }
+        $('#login-form').on('submit', function(event) {
+            event.preventDefault(); // Mencegah pengiriman form default
+            $.ajax({
+                url: '../koneksi/login.php', // Sesuaikan dengan path ke file login.php
+                type: 'POST',
+                data: $(this).serialize(), // Mengambil data dari form
+                dataType: 'json',
+                success: function(response) {
+                    if (response.success) {
+                        if (response.role === 'admin') {
+                            window.location.href = '../admin/admin.php'; // Redirect ke halaman admin
+                        } else {
+                            // Update avatar dan tetap di halaman yang sama
+                            $('#avatar-container').removeClass('hidden'); // Tampilkan avatar
+                            $('#user-name').text(response.username); // Tampilkan nama user
+                            $('#login-modal').addClass('hidden'); // Sembunyikan modal
+                        }
+                    } else {
+                        alert(response.message); // Tampilkan pesan kesalahan
+                    }
+                },
+                error: function() {
+                    alert('Terjadi kesalahan. Silakan coba lagi.'); // Tampilkan pesan kesalahan
+                }
+            });
+        });
 
         $('#daftar-form').on('submit', function(event) {
             event.preventDefault();
@@ -626,7 +647,6 @@
                         $('#avatar-container').removeClass('hidden');
                         $('#user-name').text(response.username);
 
-                        // Simpan status login di sessionStorage
                         sessionStorage.setItem('isLoggedIn', true);
                         sessionStorage.setItem('username', response.username);
                     } else {
